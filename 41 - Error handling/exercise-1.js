@@ -8,7 +8,7 @@ class BankAccount {
   deposit(amount) {
     // throw an exception if amount is negative
     if (amount < 0) {
-      throw 'Error: amount is negative'
+      throw 'Error: amount is negative';
     }
     this.#amount += amount;
   }
@@ -16,7 +16,7 @@ class BankAccount {
   withdraw(amount) {
     // throw an exception if amount is negative or if withdrawal amount is greater than current amount
     if (amount < 0 || amount > this.#amount) {
-      throw 'Error: amount is negative or withdraw amount is superior of account balance'
+      throw 'Error: amount is negative or withdraw amount is superior of account balance';
     }
     this.#amount -= amount;
   }
