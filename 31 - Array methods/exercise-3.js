@@ -1,9 +1,11 @@
 function calculateAverageAge(persons) {
-  let sum = 0, media = 0;
-  for (let i = 0; i < persons.length; i++) {
-    sum += persons[i].age;
-    media = sum / (persons.length);
-}
+  let media = 0;
+  let sum = persons.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue.age;
+  }, 0);
+
+  let total = Object.keys(persons).length;
+  media = Math.round((sum / total));
   return media;
 }
 
