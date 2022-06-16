@@ -1,5 +1,5 @@
 const order = {};
 
-if (Object.values(order).indexOf('city') == -1) {
+if (order?.customer?.address?.city == undefined) {
   console.log('City is required');
 }
