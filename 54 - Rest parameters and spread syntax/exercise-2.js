@@ -6,12 +6,12 @@ const person = {
 };
 
 
-const personInfo = {
+/*const personInfo = {
   firstName: person.firstName,
   lastName: person.lastName,
   age: person.age
-};
+};*/
 
-const {id, ...rest} = person;
+const {id, ...personInfo} = person;
 
-console.log(id, rest);
+console.log(id, personInfo);
