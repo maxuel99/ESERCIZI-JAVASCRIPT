@@ -1,0 +1,73 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Code here
+const form = document.querySelector('#person-form');
+
+window.onload = function initForm() {
+  let container = document.createElement("div");
+  let label = document.createElement("label");
+  let labelText = document.createTextNode("Age");
+  label.prepend(labelText);
+  form.prepend(container);
+  container.appendChild(label)
+
+  let input = document.createElement("input");
+  input.setAttribute("type", "number");
+  input.setAttribute("id", "txt_1");
+  label.appendChild(input);
+
+
+  let container_2 = document.createElement("div")
+  let label_2 = document.createElement("label");
+  let labelText_2 = document.createTextNode("Last Name");
+  label_2.appendChild(labelText_2);
+  form.prepend(container_2);
+  container_2.appendChild(label_2)
+
+  let input_2 = document.createElement("input");
+  input_2.setAttribute("type", "text");
+  input_2.setAttribute("id", "txt_2");
+  label_2.appendChild(input_2);
+
+
+  let container_3 = document.createElement("div")
+  let label_3 = document.createElement("label");
+  let labelText_3 = document.createTextNode("First Name");
+  label_3.appendChild(labelText_3);
+  form.prepend(container_3);
+  container_3.appendChild(label_3)
+
+  let input_3 = document.createElement("input");
+  input_3.setAttribute("type", "text");
+  input_3.setAttribute("id", "txt_3");
+  label_3.appendChild(input_3);
+
+}
+
+form.addEventListener('submit', function submitPersonForm(e) {
+  e.preventDefault();
+
+  let age = document.querySelector('#txt_1');
+  let lastName = document.querySelector('#txt_2')
+  let firstName = document.querySelector('#txt_3')
+
+  const person = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    age: age.value
+  }
+
+  console.log(person);
+  
+})
+</script>
