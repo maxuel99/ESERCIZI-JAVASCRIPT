@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  const ul = document.querySelector('.hero-list')// ogni li in ul
+  const li = document.querySelector('.hero-list-item');// solo il primo li
+
+  ul.addEventListener('mouseover', function handleMouseOver(event) {
+    if(event.target.tagName === 'LI'){
+      event.target.style.backgroundColor = 'red';
+  }
+    
+  });
+
+  ul.addEventListener('mouseout', function handleMouseOut(event) {
+    event.target.style.backgroundColor = 'transparent';
+  });    
+
+</script>
